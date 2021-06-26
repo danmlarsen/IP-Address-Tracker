@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="scss/main.scss">
+    <script src="js/index.js" defer></script>
+
+    <title>IP Address Tracker</title>
+</head>
+<body>
+    <header class="header">
+            <h1 class="header__title">IP Address Tracker</h1>
+            <div class="header__search search">
+                <form class="search__form">
+                    <input class="search__input" type="text" name="search__input" id="search__input" placeholder="Search for any IP address or domain"
+                        autocomplete="off" 
+                        autocapitalize="none" 
+                        autofocus 
+                        required
+                    >
+                    <label class="search__input-label" for="search__input">Search for any IP address or domain</label>
+                    <button class="search__submit" name="search__submit" type="submit" aria-label="Submit form"></button>
+                </form>
+            </div>
+
+            <div class="header__geolocation-container">
+                <div class="geolocation"></div>
+            </div>
+    </header>
+
+    <div class="map" id="map">
+        <div class="up-arrow hidden"></div>
+    </div>
+</body>
+</html>

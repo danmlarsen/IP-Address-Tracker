@@ -1,0 +1,32 @@
+.up-arrow {
+    position: fixed;
+    bottom: 3rem;
+    right: 2.4rem;
+    z-index: 1000;
+
+    height: 5rem;
+    width: 3rem;
+
+    background-color: #000;
+    mask-image: url('../images/icon-arrow.svg');
+    -webkit-mask-image: url('../images/icon-arrow.svg');
+    mask-position: center;
+    -webkit-mask-position: center;
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    mask-size: contain;
+    -webkit-mask-size: contain;
+
+    transform: rotate(-90deg);
+    opacity: 0.5;
+
+    cursor: pointer;
+
+    transition: all .5s ease-out;
+
+    &.hidden {
+        visibility: hidden;
+        opacity: 0;
+        transform: rotate(-90deg) translateY(10rem);
+    }
+}

@@ -1,0 +1,51 @@
+@use 'abstract' as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+
+body {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: 30rem minmax(60rem, 100vh);
+
+    @include mq(tablet) {
+        grid-template-rows: 28rem auto;
+    }
+}
+
+.header {
+    background-image: url('../images/pattern-bg.png');
+    background-size: cover;
+
+    display: grid;
+    grid-template-rows: min-content min-content auto;
+    justify-items: center;
+    
+    row-gap: 2.4rem;
+    padding: 2.6rem 2.4rem;
+
+    &__geolocation-container {
+        position: relative;
+        width: 100%;
+        max-width: 55.5rem;
+
+        @include mq(tablet) {
+            max-width: 1110px;
+            margin-top: 2.4rem;
+        }
+    }
+
+    &__title {
+        text-align: center;
+        font-size: 2.6rem;
+        font-weight: 500;
+        color: #fff;
+
+        @include mq(tablet) {
+            font-size: 3.2rem;
+        }
+    }
+}
+
+.map {
+    z-index: 0;
+}

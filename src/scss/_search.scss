@@ -1,0 +1,72 @@
+@use 'abstract' as *;
+
+$border-radius: 15px;
+
+input[type="text"],
+button[type="submit"],
+label {
+    font: inherit;
+    outline: none;
+    border: none;
+}
+
+.search {
+    width: 100%;
+    max-width: 55.5rem;
+    font-size: 1.2rem;
+
+    @include mq(tablet) {
+        font-size: 1.8rem;
+    }
+
+    &__form {
+        display: grid;
+        grid-template-columns: auto 5.8rem;
+        grid-template-rows: auto 5.8rem;
+        margin-top: -1.4rem;
+    }
+
+    &__input {
+        border-top-left-radius: $border-radius;
+        border-bottom-left-radius: $border-radius;
+        padding: 1rem 2.5rem;
+
+        &:placeholder-shown + label {
+            visibility: hidden;
+            transform: translateX(2.5rem) translateY(3.5rem);
+        }
+
+        &:focus {
+            border: 1px solid #000;
+        }
+    }
+
+    &__input-label {
+        color: hsl(0, 0%, 79%);
+        grid-row: 1;
+        grid-column: span 2;
+        transform: translateX(2.5rem);
+        transition: all .2s ease-out;
+    }
+
+    &__submit {
+        width: 5.8rem;
+        background-color: #000;
+        border-top-right-radius: $border-radius;
+        border-bottom-right-radius: $border-radius;
+
+        background-image: url('../images/icon-arrow.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+
+        cursor: pointer;
+
+        transition: .2s;
+
+        &:hover,
+        &:active,
+        &:focus {
+            background-color: hsl(0, 0%, 17%);
+        }
+    }
+}
